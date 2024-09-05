@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="main bg-black text-[#AAA9AC]">
+
+        
+        <div id="menu-cont"
+      class="menu-page fixed top-[100%] z-[99] overflow-hidden w-full md:w-1/2 right-0 h-screen bg-black justify-center flex flex-col  items-center gap-4 md:gap-4">
+      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Teams</h1>
+      <hr class="h-1 w-[80%] opacity-30">
+      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Docs</h1>
+      <hr class="h-1 w-[80%] opacity-30">
+      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Docs</h1>
+      <hr class="h-1 w-[80%] opacity-30">
+      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Contact</h1>
+      <hr class="h-1 w-[80%] opacity-30">
+      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Repo</h1>
+      <hr class="h-1 w-[80%] opacity-30">
+      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Working</h1>
+      <hr class="h-1 w-[80%] opacity-30">
+      
+      
+    </div>
+
+    <nav class="fixed w-full top-0 p-[8vw]  md:py-[2vw] py-4 md:px-[4vw] z-[100] justify-between flex items-center">
+        <h1 class="font-[handjet] font-black text-xl">IDM-VTON</h1>
+        <div id="btn-wrap" class="w-40 md:block hidden relative backdrop-blur-lg">
+            <button class="absolute w-full text-white h-full md:px-6 md:py-2 uppercase">Try Demo</button>
+            <svg id="btn-svg" class="w-40" viewBox="0 0 607 193" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" class="w-full h-48" stroke="#aaa9ac"  />
+            </svg>
+          </div>
+
+        <div id="menu-icon" class="flex items-center relative flex-col md:gap-1 gap-1 cursor-pointer  p-1 w-[30px] group">
+            <div class="w-[16px] md:h-[3px] h-[2px] shrink-0 bg-white group-hover:w-[28px] duration-200 rounded-full"></div>
+            <div class="w-[22px] md:h-[3px] h-[2px] shrink-0 bg-white group-hover:w-[22px] duration-200 rounded-full"></div>
+            <div class="w-[28px] md:h-[3px] h-[2px] shrink-0 bg-white group-hover:w-[16px] duration-200 rounded-full"></div>
+        </div>
+    </nav>
+
+
+        <canvas id="canvas" class="hidden md:block"></canvas>
+
+        <div class="introParent h-screen w-full fixed top-0 z-[200] pointer-events-none">
+            <div class="intro absolute top-0 h-[100vh] w-full flex justify-center items-center bg-zinc-400">
+                <div class="flex gap-2"> 
+                    <h1 class="text-3xl text-zinc-800">Loading you experience</h1>
+                    <h1 class="loading text-3xl text-zinc-800">1%</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="h-screen w-full top-0 relative z-[92] overflow-hidden">
+            <spline-viewer class="hidden md:block" url="https://prod.spline.design/ueHV1l1cTbnxRS2X/scene.splinecode"></spline-viewer>
+            <spline-viewer class="block md:hidden" url="https://prod.spline.design/TIKiL6iPEOvNLCEI/scene.splinecode"></spline-viewer>
+            <div class="logoHidder absolute"></div>
+        </div>
+    
+        <div id="skew" class=" pt-20 w-full overflow-hidden">
+            <div
+                class="bar skew-bar text-7xl uppercase flex w-screen justify-center  overflow-hidden font-serif py-3 ">
+                <h1 class="w-max px-10 text-center font-[anton] text-[12vw] shrink-0">IDM-VTON Virtual Dressing</h1>
+                <h1 class="w-max px-10 text-center font-[anton] text-[12vw] shrink-0">IDM-VTON Virtual Dressing</h1>
+                <h1 class="w-max px-10 text-center font-[anton] text-[12vw] shrink-0">IDM-VTON Virtual Dressing</h1>
+                <h1 class="w-max px-10 text-center font-[anton] text-[12vw] shrink-0">IDM-VTON Virtual Dressing</h1>
+                <h1 class="w-max px-10 text-center font-[anton] text-[12vw] shrink-0">IDM-VTON Virtual Dressing</h1>
+            </div>
+        </div>
+        <div class="mainstepwrapper h-[350vh] relative">
+            <div class="steps sticky top-0 h-screen px-10  text-center flex md:flex-row flex-col-reverse items-center ">
+                <div class="leftSteps md:h-full h-[40%] shrink-0 px-10">
+                    <h1 class="md:text-[10vw] text-[15vw] leading-[10vh] md:leading-[25vh] text-left font-[anton]">1.select</h1>
+                    <h1 class="md:text-[10vw] text-[15vw] leading-[10vh] md:leading-[25vh] text-left font-[anton]">2.upload</h1>
+                    <h1 class="md:text-[10vw] text-[15vw] leading-[10vh] md:leading-[25vh] text-left font-[anton]">3.Try On</h1>
+                </div>
+                <div class="right h-[60%] md:h-full flex items-center justify-center w-full md:w-1/2 p-5 relative" >
+                    <canvas id="canvas1" class="h-[80%] w-[70%] md:w-1/2 absolute md:left-[35%]"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="landingPage relative h-[250vh] ">
+            <div class="sticky top-0 h-screen bg-transparent overflow-hidden flex">
+                <div
+                    class="frontPage overflow-hidden relative h-screen flex-shrink-0 w-full px-[8vw] md:px-[4vw] flex flex-col py-[6vw]  justify-between gap-5">
+                    <p class=" md:text-[5vw] text-[15vw] mt-32 w-[50%] leading-none md:mt-10">Your Virtual Dressing Room, Anytime Anywhere</p>
+                    <div id="glitchImgs"
+                        class="absolute w-full h-full justify-center items-center flex z-[-1] top-0 left-[60%] -translate-x-1/2">
+
+                        <img id="img1" class="absolute g-img opacity-1  h-full object-contain object-bottom"
+                            src="./assets/images/model1.png" alt="">
+                        <img id="img2" class="absolute g-img opacity-0  h-full object-contain object-bottom"
+                            src="./assets/images/model1_brown_fur-removebg-preview.png" alt="">
+                    </div>
+
+                    <h1
+                        class="main-text pointer-events-none z-[5] px-5 md:px-10 absolute hidden left-1/2 top-1/2 -translate-x-1/2 -translate-y-[40%] font-[handjet] leading-none text-[26vw] w-full flex items-center justify-center">
+                        <span class="font-[handjet] font-black tracking-wider text-black/[1]">IDM</span>
+                        <span class="font-[handjet] font-black tracking-wider text-black/[1]">-</span>
+                        <span class="font-[handjet] font-black tracking-wider text-black/[1]">VTON</span>
+                    </h1>
+                    <div id="transition-circle"
+                        class="absolute hidden pointer-events-none top-1/2 left-1/2 -translate-x-1/2  origin-center  bg-black w-[2vw] aspect-square z-[99]">
+                    </div>
+                    <p class="steps-text-center hidden text-sm w-3/4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ex consequuntur laudantium obcaecati minima qui earum officia consequatur, laboriosam libero
+                        sequi. Cum dolore earum, dolorem voluptatem hic totam sapiente non iste, architecto, alias
+                        aspernatur quasi assumenda.</p>
+                </div>
+                <div class="circlePage h-screen w-screen absolute top-0 overflow-hidden">
+                    <div
+                        class="circleDiv  md:h-[10vw] md:w-[10vw] h-[12vh] w-[12vh] overflow-hidden bg-black border  rounded-full absolute top-1/2 right-[12vw] translate-x-[50%] translate-y-[-50%]">
+                        <div
+                            class="leftText text-nowrap absolute top-1/2 left-[34%] translate-x-[-50%] translate-y-[-50%] w-[46vw] h-auto overflow-hidden">
+                            <h1 class="font-['anton'] md:text-9xl text-4xl relative">Our Journey</h1>
+                        </div>
+                        <img class="absolute top-1/2 z-[1] left-1/2 translate-x-[-50%] text-right translate-y-[-50%] md:h-[10vw] md:w-[10vw] h-[12vh] w-[12vh] rounded-full object-cover"
+                            src="./assets/images/3d-rendering-arrow-hitting-target_23-2151266523.avif" alt="">
+                        <div
+                            class="rightText text-nowrap absolute top-1/2 right-[34%] text-right translate-x-[50%] translate-y-[-50%] w-[46vw] h-auto overflow-hidden">
+                            <h1 class="font-['anton'] md:text-9xl text-4xl relative md:mt-0 mt-8">Our Mission</h1>
+                        </div>
+                        <p
+                            class="ourMission absolute text-white md:bottom-[43%] md:w-[40vw] md:right-[20%] bottom-[32%] right-[36%] w-[75vw] text-lg leading-6 tracking-loose">
+                            At IDM VTON, our mission is to empower businesses with cutting-edge technology solutions
+                            that drive growth and success. We strive to stay ahead of the curve by constantly evolving
+                            and adapting to the latest industry trends. Our team is dedicated to providing personalized
+                            services that meet the unique needs of each client, ensuring that they achieve their goals
+                            and objectives. With a focus on quality, innovation, and customer satisfaction, we aim to be
+                            the preferred partner for businesses looking to thrive in the digital age.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="h-screen hidden relative w-full">
+            <div id="glitchImgs"
+                class="absolute w-full h-full justify-center items-center flex z-[8] top-0 left-1/2 -translate-x-1/2">
+                <img id="img4" class="absolute g-img opacity-0 md:w-max bottom-0 w-full object-cover h-full"
+                    src="./assets/images/model1_swim-removebg-preview.png" alt="">
+                <img id="img3" class="absolute g-img opacity-0 md:w-max bottom-0 w-full object-cover h-full"
+                    src="./assets/images/model1_brown_jac-removebg-preview.png" alt="">
+                <img id="img2" class="absolute g-img opacity-0 md:w-max bottom-0 w-full object-cover h-full" src="./assets/images/model1.png"
+                    alt="">
+                <img id="img1" class="absolute g-img opacity-0 md:w-max bottom-0 w-full object-cover h-full"
+                    src="./assets/images/model1_brown_fur-removebg-preview.png" alt="">
+            </div>
+        </div>
+        <div class="minimap-wrapper h-[300vh] relative w-full ">
+            <div
+                class="minimap sticky top-0 overflow-hidden h-screen flex w-full px-[8vw] gap-5  md:px-32 md:py-20 md:gap-20">
+                <div class="virtual-photu top-0 left-0 absolute h-screen z-[9]  w-full px-[8vw] md:p-10 flex items-center">
+                    <h1 class="font-[anton]  text-[20vw] md:text-[10vw] md:leading-[22vh] leading-[11vh]">Explore The
+                        <br> Try-On Gallery
+                    </h1>
+                </div>
+                <div class="details absolute md:w-[20vw] bottom-10 font-[anton] md:px-0 px-[8vw] md:right-10 text-right">
+                    <h1 class="text-4xl mb-5">Virtual Try-on <br> in the Wild</h1>
+                    <h1 class="text-sm">Virtual try-on uses internet images and customizes TryonNet for high-quality,
+                        consistent results in diverse scenarios.</h1>
+                </div>
+                <div class="images md:block hidden relative space-y-5">
+                    <div class="selectBox absolute  top-[41.5%] -left-2 border-4 w-32 h-40"></div>
+                    <div class="img-box w-28 h-36 overflow-hidden  rounded-lg">
+                        <img class="h-full w-full object-cover" src="./assets/images/brown.png" alt="Image 1">
+                    </div>
+                    <div class="img-box w-28 h-36 overflow-hidden rotate-[-3.5deg] rounded-lg">
+                        <img class="h-full w-full object-cover" src="./assets/images/purple.png" alt="Image 1">
+                    </div>
+                    <div class="img-box w-28 h-36 overflow-hidden -mt-20  rounded-lg">
+                        <img class="h-full w-full object-cover" src="./assets/images/black.png" alt="Image 1">
+                    </div>
+
+
+                </div>
+                <div class="showimage md:px-0 px-[6vw] w-full h-full  relative flex justify-center">
+                    <div class="imgParent absolute h-full w-full flex flex-col gap-5 ">
+                        <div class="imgBox overflow-hidden  shrink-0 rounded-lg w-full h-[60%]   md:h-full">
+                            <img src="./assets/images/Screenshot_2024-09-04_183205-removebg-preview.png"
+                                class="h-full md:ml-52 bg-gray-300 object-cover" alt="">
+                        </div>
+                        <div class="imgBox overflow-hidden  shrink-0 rounded-lg w-full h-[60%]   md:h-full">
+                            <img src="./assets/images/Screenshot_2024-09-04_183923-removebg-preview (1).png"
+                                class="h-full md:ml-52 bg-gray-300 object-cover" alt="">
+                        </div>
+                        <div class="imgBox overflow-hidden  shrink-0 rounded-lg w-full  h-[60%]   md:h-full">
+                            <img src="./assets/images/Screenshot_2024-09-04_184218-removebg-preview (1).png"
+                                class="h-full md:ml-52 bg-gray-300 object-cover" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ending-page overflow-hidden relative h-full mt-[20vh]">
+            <div
+                class="overlay absolute -z-1 left-1/2 -translate-x-1/2 translate-y-1/2 rounded-t-full h-full w-[120vw] md:w-full scale-[1.2] shadow-[inset_0px_0px_55px_50px_rgba(255,255,255,.2)] md:shadow-[inset_0px_0px_120px_80px_rgba(255,255,255,.2)]">
+            </div>
+            <div
+                class="lastsecond-page overflow-x-hidden relative z-[90] h-[70vh] md:h-[60vh] w-screen flex flex-col items-center justify-center px-5 md:px-10">
+                <div class="center-div flex flex-col gap-5 items-center justify-center relative z-10">
+                    <h1 class="text-4xl md:text-7xl font-bold text-center">Dive Into the <br class="md:hidden">Future of Fashion
+                        <br> with IDM
+                        VTON</h1>
+                        <div id="btn-wrap" class="w-40 md:block hidden relative z-[90] backdrop-blur-lg">
+                            <button class="absolute w-full text-white h-full md:px-6 md:py-2 uppercase">Explore</button>
+                            <svg id="btn-svg" class="w-40" viewBox="0 0 607 193" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect x="1" y="1" class="w-full h-48" stroke="#aaa9ac"  />
+                            </svg>
+                          </div>
+                </div>
+            </div>
+            <footer
+                class="footer relative h-screen px-[6vw] lg:px-10 flex flex-col-reverse md:flex-col items-center justify-end gap-5">
+                <div
+                    class="top-section md:translate-y-[200%] font-[hepta-reg] w-full flex flex-col justify-center sm:flex-row sm:justify-between sm:items-start sm:gap-10 gap-2 pb-5">
+                    <li id="li-1" class="w-fit relative hidden sm:flex flex-col justify-center gap-1">
+                        <h1 class="li-1 text-2xl font-semibold capitalize font-[anton]">social handles</h1>
+                        <div class="flex gap-4">
+                            <a class="li-1 text-2xl capitalize font-light" href=""><i class="ri-twitter-x-line"></i></a>
+                            <a class="li-1 text-2xl capitalize font-light" href=""><i class="ri-youtube-fill"></i></a>
+                            <a class="li-1 text-2xl capitalize font-light" href=""><i class="ri-instagram-line"></i></a>
+                        </div>
+                    </li>
+                    <li id="li-2" class="w-fit relative flex flex-col justify-center gap-1">
+                        <h1 class="li-2 text-hover text-2xl font-semibold capitalize font-[anton]">friends</h1>
+                        <a class="li-2 text-hover text-lg capitalize font-light" href="">PS2 filter AI</a>
+                        <a class="li-2 text-hover text-lg capitalize font-light" href="">fooocus</a>
+                        <a class="li-2 text-hover text-lg capitalize font-light" href="">story diffusion</a>
+                    </li>
+                    <li id="li-3" class="w-fit relative flex flex-col justify-center gap-1">
+                        <h1 class="li-3 text-2xl font-semibold capitalize font-[anton] whitespace-nowrap">legal
+                        </h1>
+                        <a class="li-3 text-hover text-lg capitalize font-light" href="">privacy</a>
+                        <a class="li-3 text-hover text-lg capitalize font-light" href="">terms</a>
+                    </li>
+                </div>
+                <div
+                    class="middle-part w-full z-[5] h-[30vh] md:h-[40vh] border-b-2 border-neutral-600 overflow-hidden px-5 md:px-10 font-[anton] leading-none text-[26vw] flex items-center justify-center">
+                    <div class="middle-text md:translate-y-[100%]">
+                        <h1 id="idm-vton"
+                            class="text-[24vw] md:text-[25vw] font-bold translate-y-[10%] uppercase whitespace-nowrap">
+                            idm-vton
+                        </h1>
+                    </div>
+                </div>
+                <div
+                    class="bottom-links w-full pb-5 flex flex-col gap-3 md:gap-0 md:flex-row items-start justify-between md:items-center">
+                    <div class="">
+                        <h1 class="head font-bold text-gray-600 capitalize">copyright:</h1>
+                        <h1 class="body font-bold capitalize">© IDM VTON, Inc. All rights reserved.</h1>
+                    </div>
+                    <div class="">
+                        <h1 class="head font-bold text-gray-600 capitalize">fast travel:</h1>
+                        <a href="#landing-page" class="body text-hover font-bold capitalize">go back to top</a>
+                    </div>
+                    <div class="">
+                        <h1 class="head font-bold text-gray-600 capitalize">learn:</h1>
+                        <a href="#" class="body text-hover font-bold capitalize">how to use ?</a href="#">
+                    </div>
+                    <div class="">
+                        <h1 class="head font-bold text-gray-600 capitalize">design by:</h1>
+                        <h1 class="body text-hover font-bold capitalize">the golus</h1>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.23/build/spline-viewer.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.23/build/spline-viewer.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
