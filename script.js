@@ -362,7 +362,7 @@ function stepCanvas() {
     const context = canvas.getContext("2d");
 
     canvas.width = window.innerWidth/2;
-    canvas.height = window.innerHeight/1.7;
+    canvas.height = window.innerWidth >768 ?  window.innerHeight : window.innerHeight/1.6;
 
 
     window.addEventListener("resize", function () {
