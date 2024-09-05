@@ -718,7 +718,9 @@ function setupCanvas() {
     canvas.height = window.innerHeight;
 }
 }
-cursor();
+if(window.innerWidth > 768)
+cursor();{
+}
 
 
 
